@@ -57,7 +57,42 @@ namespace S2
 
             #endregion
 
+            #region Set Operators
 
+            //var Seq01 = Enumerable.Range(0, 100); // 0 .. 99
+                                                 
+            //var Seq02 = Enumerable.Range(50, 100); // 50 .. 149 
+
+
+            //var Seq03 = Seq01.Union(Seq02);
+
+            //Seq03 = Seq01.Concat(Seq02);
+
+            //Seq03 = Seq03.Distinct(); 
+
+            //Seq03 = Seq01.Except(Seq02);
+
+            //Seq03 = Seq01.Intersect(Seq02);
+
+
+
+
+
+            //Console.WriteLine("=================Seq01================");
+            //foreach (var i in Seq01)
+            //    Console.Write($"{i} ");
+
+            //Console.WriteLine();
+            //Console.WriteLine("=================Seq02================");
+            //foreach (var i in Seq02)
+            //    Console.Write($"{i} ");
+
+            //Console.WriteLine();
+            //Console.WriteLine("=================Seq03================");
+            //foreach (var i in Seq03)
+            //    Console.Write($"{i} ");
+
+            #endregion
         }
     }
 }
