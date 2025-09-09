@@ -2,6 +2,7 @@
 using System.Collections;
 using System.ComponentModel;
 using static S2.Data.ListGenerator;
+using System.Text.RegularExpressions;
 
 namespace S2
 {
@@ -244,6 +245,36 @@ namespace S2
 
             //foreach (var item in Result)
             //    Console.WriteLine(item);
+            #endregion
+
+            #region Let and Into [valid with Query Syntax Only]
+
+            //List<string> Names = new List<string>()
+            //{
+            //    "Omar",
+            //    "Ahmed",
+            //    "Sally",
+            //    "Mohamed",
+            //    "Ali"
+            //};
+
+            //// A , O , U , I , E 
+
+            ////var Result = from N in Names
+            ////             select Regex.Replace(N, "[AOUIEaouie]", string.Empty)
+            ////             into NoVowelNames
+            ////             where NoVowelNames.Length > 3
+            ////             select NoVowelNames;
+
+
+            //var Result = from N in Names
+            //             let NoVowelNames =  Regex.Replace(N, "[AOUIEaouie]", string.Empty)
+            //             where NoVowelNames.Length > 3
+            //             select NoVowelNames;
+
+            //foreach (var N in Result)
+            //    Console.WriteLine(N);
+
             #endregion
 
         }
