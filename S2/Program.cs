@@ -219,11 +219,31 @@ namespace S2
             //foreach (var Category in Result)
             //{
             //    Console.WriteLine(Category);
-      
+
 
 
             //}
             #endregion
+            #endregion
+
+            #region Partitioning Operartor
+
+            //int[] Numbers = { 5, 4, 1, 9, 7, 6, 2, 3 };
+
+            //var Result = ProductList.Where(P => P.UnitsInStock > 0).Take(10);
+            //Result = ProductList.TakeLast(10);
+
+            //var Result = ProductList.Where(P => P.UnitsInStock == 0).Skip(2);
+            //var Result = ProductList.Where(P => P.UnitsInStock == 0).SkipLast(2);
+
+            //var Result = Numbers.TakeWhile((Number,I) => Number > I);
+
+            //var Result = Numbers.SkipWhile(N => N < 9);
+
+            //var Result = ProductList.Skip(20).Take(10);
+
+            //foreach (var item in Result)
+            //    Console.WriteLine(item);
             #endregion
 
         }
