@@ -1,5 +1,6 @@
 ﻿using S2.Data;
 using System.Collections;
+using System.ComponentModel;
 using static S2.Data.ListGenerator;
 
 namespace S2
@@ -119,20 +120,110 @@ namespace S2
 
             #region Zipping Operator
 
-            string[] Names = { "Ahmed", "Mona", "Aya", "Ali", "Mohamed" };
+            //string[] Names = { "Ahmed", "Mona", "Aya", "Ali", "Mohamed" };
 
-            int[] Numbers = Enumerable.Range(1, 10).ToArray(); // 1 .. 10
+            //int[] Numbers = Enumerable.Range(1, 10).ToArray(); // 1 .. 10
 
-            char[] Chars = { 'A', 'B', 'C', 'D', 'E' };
-
-
-            //var Result = Names.Zip(Numbers,(Name,Number) => new {index = Number , Name = Name});
-            var Result = Names.Zip(Numbers,Chars);
-
-            foreach (var i in Result)
-                Console.WriteLine(i);
+            //char[] Chars = { 'A', 'B', 'C', 'D', 'E' };
 
 
+            ////var Result = Names.Zip(Numbers,(Name,Number) => new {index = Number , Name = Name});
+            //var Result = Names.Zip(Numbers,Chars);
+
+            //foreach (var i in Result)
+            //    Console.WriteLine(i);
+
+
+            #endregion
+
+            #region Grouping Operators
+
+            #region Get Products Grouped by Category 
+
+            //var Result = from P in ProductList
+            //             group P by P.Category;
+
+            //Result = ProductList.GroupBy(p => p.Category);
+
+            //foreach (var Category in Result)
+            //{
+            //    Console.WriteLine(  Category.Key);
+            //    foreach(var Product in Category)
+            //        Console.WriteLine($"             {Product.ProductName}");
+
+
+            //}
+
+
+            #endregion
+
+            #region Get Products in Stock Grouped by Category 
+
+            //var Result = from P in ProductList
+            //             where P.UnitsInStock > 0   
+            //             group P by P.Category;
+
+            //Result = ProductList.Where(P => P.UnitsInStock > 0).GroupBy(p => p.Category);
+
+            //foreach (var Category in Result)
+            //{
+            //    Console.WriteLine(Category.Key);
+            //    foreach (var Product in Category)
+            //        Console.WriteLine($"             {Product.ProductName}");
+
+
+            //}
+
+            #endregion
+
+            #region  Get Products in Stock Grouped by Category That Contains More Than 10 Products
+            //var Result = from P in ProductList
+            //             where P.UnitsInStock > 0
+            //             group P by P.Category
+            //             into Category
+            //             where Category.Count() > 10
+            //             select Category;
+
+
+            //Result = ProductList.Where(P => P.UnitsInStock > 0).GroupBy(p => p.Category).Where(Category => Category.Count() > 10);
+
+            //foreach (var Category in Result)
+            //{
+            //    Console.WriteLine(Category.Key);
+            //    foreach (var Product in Category)
+            //        Console.WriteLine($"             {Product.ProductName}");
+
+
+            //}
+            #endregion
+
+            #region Get Category Name of Products in Stock That Contains More Than 10 Product and Number of Product In Each Category
+
+            //var Result = from P in ProductList
+            //             where P.UnitsInStock > 0
+            //             group P by P.Category
+            //             into Category
+            //             where Category.Count() > 10
+            //             select new
+            //             {
+            //                 CategoryName = Category.Key,
+            //                 NumberOfProducts = Category.Count(),
+            //             };
+
+            //Result = ProductList.Where(P => P.UnitsInStock > 0).GroupBy(p => p.Category).Where(Category => Category.Count() > 10).Select(Category => new
+            //{
+            //    CategoryName = Category.Key,
+            //    NumberOfProducts = Category.Count()
+            //});
+
+            //foreach (var Category in Result)
+            //{
+            //    Console.WriteLine(Category);
+      
+
+
+            //}
+            #endregion
             #endregion
 
         }
