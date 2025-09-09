@@ -22,22 +22,42 @@ namespace S2
             //HashSet<Product> Result = ProductList.Where(P => P.UnitsInStock == 0).ToHashSet();
 
 
-            ArrayList arrayList = new ArrayList()
-            {
-                "Ahmed",
-                "Mona",
-                "Aya",
-                1,
-                2,
-                3
-            };
+            //ArrayList arrayList = new ArrayList()
+            //{
+            //    "Ahmed",
+            //    "Mona",
+            //    "Aya",
+            //    1,
+            //    2,
+            //    3
+            //};
 
-            var Result = arrayList.OfType<int>();
+            //var Result = arrayList.OfType<int>();
 
-            foreach(var item in Result)
-                Console.WriteLine(item);
+            //foreach(var item in Result)
+            //    Console.WriteLine(item);
 
             #endregion
+
+            #region Generation Operators
+
+            //var Result = Enumerable.Range(0, 100);
+
+            //Result = Enumerable.Repeat(2, 100);
+            //var Result = Enumerable.Repeat(new Product(), 100);
+
+            ////var Result02 = Enumerable.Empty<Product>().ToArray;
+            //var Result02 = Enumerable.Empty<Product>().ToList();
+            //Product[] products = new Product[0];
+
+
+
+            //foreach(var i in Result)
+            //    Console.Write($"{i} ");
+
+            #endregion
+
+
         }
     }
 }
